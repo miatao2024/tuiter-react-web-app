@@ -7,131 +7,139 @@
     </head>
     <body>
         <table>
-            <tr>
-                <td>
-                    <a href="home.html">Home</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="profile.html">Profile</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="edit-profile.htmll">Edit-Profile</a>
-                </td>
-            </tr>
-        </table>       
-        <a href="navigation.html">Back</a>
+            <tbody>
+                <tr valign="top">
+                    <td colspan="3">
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td>
+                        <!-- left sidebar -->
+                        <a href="home.html">Home</a><br>
+                        <a href="explore.html">Explore</a><br>
+                        <a href="notifications.html">Notifications</a><br>
+                        <a href="messages.html">Messages</a><br>
+                        <a href="bookmarks.html">Bookmarks</a><br>
+                        <a href="lists.html">Lists</a><br>
+                        <a href="profile.html">Profile</a><br>
+                        <a href="tuit.html">Tuit</a><br>
+                        <a href="reply.html">Reply</a>
+                    </td>
+                    <td>
+                        <!-- main content -->
+                        <a href="navigation.html">Back</a>
 
-        <!-- Below the link add an h1 Tuiter header and an h2 Home header below that. -->
-        <h1>Tuiter</h1>
-        <h2>Home</h2>
-
-        <!-- Below the headers add a 48 by 48 pixel image representing the owner of the account.  -->
-        <!-- <br/>  感觉就是用来换行的 -->
-            <img src = "my-picture.jpeg"
-                width = "48px"
-                height = "48px"/>
-        <br/>
-
-        <!-- Add a textarea element for users to post new tuits. -->
-        <!-- The textarea should have a placeholder that says "What's happening?".  -->
-        <form id="textarea" style="margin-left: 0;">  <!-- The cols and rows attributes of the <textarea> element do not accept pixel values -->
-            <textarea cols="20" rows="5">What's happening?  </textarea> 
-            <!-- !!! NO SPACE in <textarea>-->
-        </form>
-        
-        <!-- Add a dropdown with options "Everyone can reply", "People you follow", and "Only people you mention", 
-            with values "EVERYONE", "FOLLOWING", and "MENTIONED" respectively.  -->
-        <form id="text-fields">
-            <select id="select-one-genre">
-                <!-- Default value should be "EVERYONE" -->
-                <option selected value="EVERYONE">Everyone can reply</option>
-                <option value="FOLLOWING">People you follow</option>
-                <option value="MENTIONED">Only people you mention</option>
-            </select>
-        </form>
-        <hr>
-        <!-- <hr> tag is used to create a horizontal line. 
-            It will span the full width of its container element and visually separate the content above and below it. -->
-
-        <!-- Add a button to upload an image 
-            and another button labeled "Tuit" to create a new tuit.  -->
-        <input type="file"/>
-        <button type="button">Tuit</button>
-        <hr>
-
-        <!-- Use an unordered list ul to create a couple of tuits as line item elements li 
-            shown here on the right as bullet points.  -->
-        <ul>
-            <li><a href="topic.html">Topic 234</a></li>
-                <br/>
-                <img src = "B-Cube.jpeg"
-                    width = "48px"
-                    height = "48px"/> 
-
-                <a href="profile.html">BlackPink</a> <span class="handle">@BlackPink</span><span class="timestamp"> - 10h</span>
-                <p>
-                    The meaning of BLACKPINK aims to contradict the common perception of the color pink," the statement read. "Pink is commonly used to portray prettiness, but BLACKPINK actually means to say that 'Pretty isn't everything.' It also symbolizes that they are a team that encompasses not only beauty but also great talent.
-                </p>
-                <p>
-                    <a href="reply.html">Reply</a> 983 &#124;
-                    <a href="retuit.html">Retuit</a> 1000 &#124;
-                    <a href="like.html">Like</a> 999 &#124;
-                    <a href="share.html">Share</a> 
-                </p>
+                        <!-- Below the link add an h1 Tuiter header and an h2 Home header below that. -->
+                        <h1>Tuiter</h1>
+                        <h2>Home</h2>
                 
-            <!-- As the header of the tuit, add a hyperlink referencing topic.html labeled Topic 123. -->
-            <li><a href="topic.html">Topic 123</a></li>
-                <br/>
-            <!-- Add a 48 by 48 pixel image, 
-                a link referencing profile.html labeled Alice, 
-                add a handle @alice, and a time stamp of 2 hours as shown on the right.  -->
-                <img src = "Alice.jpeg"
-                    width = "48px"
-                    height = "48px"/>
-                <a href="profile.html">Minjia</a> <span class="handle">@Minjia</span><span class="timestamp"> - 2h</span>
-                <!-- <a href="profile.html">Minjia</a> @Minjia <p class="timestamp"> - 2h</p> -->
-
-                <!-- Below the tuit's header add a paragraph with dummy content as shown.  -->
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-
-                <!-- Below the tuit, add links Reply, Retuit, Like, and Share linked to reply.html, retuit.html, like.html, and share.html respectively. -->
-                <!-- Include count values 123, 234, and 345 as shown.  -->
-                <p>
-                    <a href="reply.html">Reply</a> 123 &#124;
-                    <a href="retuit.html">Retuit</a> 234 &#124;
-                    <a href="like.html">Like</a> 345 &#124;
-                    <!-- &#124; 代表｜ -->
-                    <a href="share.html">Share</a> 
-                </p>
-        
-            <li><a href="topic.html">Topic 567</a></li>
-                <br/>
-                <img src = "Twice.png"
-                    width = "48px"
-                    height = "48px"/> 
-
-                <a href="profile.html">Twice</a> <span class="handle">@Twice</span><span class="timestamp"> - 6h</span>
-                <p>
-                    Lyrically, 'I Can't Stop Me' tells a story of embracing one's desires and breaking free from self-imposed restraints. The lyrics express the desire to indulge in love and passion, even if it means crossing boundaries and facing consequences.
-                </p>
-                <p>
-                    <video src="ICannotStopMe.mp4" controls width="400" height="300">
-                        Your browser does not support the video tag.
-                    </video>
-                </p>
-                <p>
-                    <a href="reply.html">Reply</a> 666 &#124;
-                    <a href="retuit.html">Retuit</a> 888 &#124;
-                    <a href="like.html">Like</a> 10000 &#124;
-                    <a href="share.html">Share</a> 
-                </p>
-        </ul>  
+                        <!-- Below the headers add a 48 by 48 pixel image representing the owner of the account.  -->
+                        <!-- <br/>  感觉就是用来换行的 -->
+                            <img src = "my-picture.jpeg"
+                                width = "48px"
+                                height = "48px"/>
+                        <br/>
+                
+                        <!-- Add a textarea element for users to post new tuits. -->
+                        <!-- The textarea should have a placeholder that says "What's happening?".  -->
+                        <form id="textarea" style="margin-left: 0;">  <!-- The cols and rows attributes of the <textarea> element do not accept pixel values -->
+                            <textarea cols="20" rows="5">What's happening?  </textarea> 
+                            <!-- !!! NO SPACE in <textarea>-->
+                        </form>
+                        
+                        <!-- Add a dropdown with options "Everyone can reply", "People you follow", and "Only people you mention", 
+                            with values "EVERYONE", "FOLLOWING", and "MENTIONED" respectively.  -->
+                        <form id="text-fields">
+                            <select id="select-one-genre">
+                                <!-- Default value should be "EVERYONE" -->
+                                <option selected value="EVERYONE">Everyone can reply</option>
+                                <option value="FOLLOWING">People you follow</option>
+                                <option value="MENTIONED">Only people you mention</option>
+                            </select>
+                        </form>
+                        <hr>
+                        <!-- <hr> tag is used to create a horizontal line. 
+                            It will span the full width of its container element and visually separate the content above and below it. -->
+                
+                        <!-- Add a button to upload an image 
+                            and another button labeled "Tuit" to create a new tuit.  -->
+                        <input type="file"/>
+                        <button type="button">Tuit</button>
+                        <hr>
+                
+                        <!-- Use an unordered list ul to create a couple of tuits as line item elements li 
+                            shown here on the right as bullet points.  -->
+                        <ul>
+                            <li><a href="topic.html">Topic 234</a></li>
+                                <br/>
+                                <img src = "B-Cube.jpeg"
+                                    width = "48px"
+                                    height = "48px"/> 
+                
+                                <a href="profile.html">BlackPink</a> <span class="handle">@BlackPink</span><span class="timestamp"> - 10h</span>
+                                <p>
+                                    The meaning of BLACKPINK aims to contradict the common perception of the color pink," the statement read. "Pink is commonly used to portray prettiness, but BLACKPINK actually means to say that 'Pretty isn't everything.' It also symbolizes that they are a team that encompasses not only beauty but also great talent.
+                                </p>
+                                <p>
+                                    <a href="reply.html">Reply</a> 983 &#124;
+                                    <a href="retuit.html">Retuit</a> 1000 &#124;
+                                    <a href="like.html">Like</a> 999 &#124;
+                                    <a href="share.html">Share</a> 
+                                </p>
+                                
+                            <!-- As the header of the tuit, add a hyperlink referencing topic.html labeled Topic 123. -->
+                            <li><a href="topic.html">Topic 123</a></li>
+                                <br/>
+                            <!-- Add a 48 by 48 pixel image, 
+                                a link referencing profile.html labeled Alice, 
+                                add a handle @alice, and a time stamp of 2 hours as shown on the right.  -->
+                                <img src = "Alice.jpeg"
+                                    width = "48px"
+                                    height = "48px"/>
+                                <a href="profile.html">Minjia</a> <span class="handle">@Minjia</span><span class="timestamp"> - 2h</span>
+                                <!-- <a href="profile.html">Minjia</a> @Minjia <p class="timestamp"> - 2h</p> -->
+                
+                                <!-- Below the tuit's header add a paragraph with dummy content as shown.  -->
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                
+                                <!-- Below the tuit, add links Reply, Retuit, Like, and Share linked to reply.html, retuit.html, like.html, and share.html respectively. -->
+                                <!-- Include count values 123, 234, and 345 as shown.  -->
+                                <p>
+                                    <a href="reply.html">Reply</a> 123 &#124;
+                                    <a href="retuit.html">Retuit</a> 234 &#124;
+                                    <a href="like.html">Like</a> 345 &#124;
+                                    <!-- &#124; 代表｜ -->
+                                    <a href="share.html">Share</a> 
+                                </p>
+                        
+                            <li><a href="topic.html">Topic 567</a></li>
+                                <br/>
+                                <img src = "Twice.png"
+                                    width = "48px"
+                                    height = "48px"/> 
+                
+                                <a href="profile.html">Twice</a> <span class="handle">@Twice</span><span class="timestamp"> - 6h</span>
+                                <p>
+                                    Lyrically, 'I Can't Stop Me' tells a story of embracing one's desires and breaking free from self-imposed restraints. The lyrics express the desire to indulge in love and passion, even if it means crossing boundaries and facing consequences.
+                                </p>
+                                <p>
+                                    <video src="ICannotStopMe.mp4" controls width="400" height="300">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </p>
+                                <p>
+                                    <a href="reply.html">Reply</a> 666 &#124;
+                                    <a href="retuit.html">Retuit</a> 888 &#124;
+                                    <a href="like.html">Like</a> 10000 &#124;
+                                    <a href="share.html">Share</a> 
+                                </p>
+                        </ul>  
+                    </td>
+                </tr>
+            </tbody>
+        </table>       
     </body>
 </html>
 

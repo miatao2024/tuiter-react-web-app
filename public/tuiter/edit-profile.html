@@ -7,70 +7,79 @@
     </head>
     <body>
         <table>
-            <tr>
-                <td>
-                    <a href="home.html">Home</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="profile.html">Profile</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="edit-profile.htmll">Edit-Profile</a>
-                </td>
-            </tr>
-        </table>
-        <!-- add a Back button at the top navigating to the previous screen, e.g., profile.html. -->
-        <a href="profile.html">Back</a>
+            <tbody>
+                <tr valign="top">
+                    <td colspan="3">
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td>
+                        <!-- left sidebar -->
+                        <a href="home.html">Home</a><br>
+                        <a href="explore.html">Explore</a><br>
+                        <a href="notifications.html">Notifications</a><br>
+                        <a href="messages.html">Messages</a><br>
+                        <a href="bookmarks.html">Bookmarks</a><br>
+                        <a href="lists.html">Lists</a><br>
+                        <a href="profile.html">Profile</a><br>
+                        <a href="tuit.html">Tuit</a><br>
+                        <a href="reply.html">Reply</a>
+                    </td>
+                    <td>
+                        <!-- main content -->
 
-        <!-- Below the Back link, add an h1 Tuiter header and an h2 Edit Profile header below that.  -->
-        <h1>Tuiter</h1>
-        <h2>Edit Profile</h2>
+                        <!-- add a Back button at the top navigating to the previous screen, e.g., profile.html. -->
+                        <a href="profile.html">Back</a>
 
-        <!-- Below the headers add a Save link referencing profile.html.  -->
-        <a href="profile.html">Save</a>
+                        <!-- Below the Back link, add an h1 Tuiter header and an h2 Edit Profile header below that.  -->
+                        <h1>Tuiter</h1>
+                        <h2>Edit Profile</h2>
 
-        <!-- Then add a 200 pixel high by 100% wide banner image below the Save link. -->
-        <img src="Banner.webp" style="height: 200px; width: 100%;">
-        <br>
+                        <!-- Below the headers add a Save link referencing profile.html.  -->
+                        <a href="profile.html">Save</a>
 
-        <!-- Below the image add a file input field that could be used in the future to update the banner image. -->
-        <form>
-            <input type="file" name="bannerImage" id="bannerImage">
-        </form>
+                        <!-- Then add a 200 pixel high by 100% wide banner image below the Save link. -->
+                        <img src="Banner.webp" style="height: 200px; width: 100%;">
+                        <br>
 
-        <!-- Then add a 48 x 48 pixel avatar image. Use an image of your choice.  -->
-        <img src = "my-picture.jpeg"
-            width = "48px"
-            height = "48px"/>
-        <br>
-        <!-- Below the avatar image add a file input field that could be used in the future to update the avatar image. -->
-        <input type="file"/>
-        <br>
-        <!-- Add a ruler tag to separate the content vertically.  -->
-        <hr>
-        <!-- Below the ruler add a Name label associated to an input field that in the future could be used to edit the name of the user.  -->
-        <form id="text-fields">
-            <label for="text-fields-name">Name</label>
-            <br>
-            <!-- The field should have WebDev as the default value and Name as the placeholder. If you click on the label, the input field should get focus.  -->
-            <input type="text" id="text-fields-name"
-                   placeholder="Name" value="WebDev"/>
-        </form>
-        <!-- Add a ruler tag to separate the content vertically.  -->
-        <hr>
+                        <!-- Below the image add a file input field that could be used in the future to update the banner image. -->
+                        <form>
+                            <input type="file" name="bannerImage" id="bannerImage">
+                        </form>
 
-        <!-- Below the ruler tag, add a Bio label associated to a textarea that in the future could be used to edit the user's bio information. -->
-        <form id="textarea">
-            <label>Bio</label><br/>
-            <!-- The textarea should be 50 columns wide by 10 rows high.  -->
-            <textarea cols="50" rows="10" style="text-align: left;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </textarea>
-        </form>
-        <!-- Confirm you can navigate from navigation.html to home.html, and profile.html and then back to navigation.html. 
-            Also confirm you can navigate from profile.html to edit-profile.html and back again. -->
+                        <!-- Then add a 48 x 48 pixel avatar image. Use an image of your choice.  -->
+                        <img src = "my-picture.jpeg"
+                            width = "48px"
+                            height = "48px"/>
+                        <br>
+                        <!-- Below the avatar image add a file input field that could be used in the future to update the avatar image. -->
+                        <input type="file"/>
+                        <br>
+                        <!-- Add a ruler tag to separate the content vertically.  -->
+                        <hr>
+                        <!-- Below the ruler add a Name label associated to an input field that in the future could be used to edit the name of the user.  -->
+                        <form id="text-fields">
+                            <label for="text-fields-name">Name</label>
+                            <br>
+                            <!-- The field should have WebDev as the default value and Name as the placeholder. If you click on the label, the input field should get focus.  -->
+                            <input type="text" id="text-fields-name"
+                                placeholder="Name" value="WebDev"/>
+                        </form>
+                        <!-- Add a ruler tag to separate the content vertically.  -->
+                        <hr>
+
+                        <!-- Below the ruler tag, add a Bio label associated to a textarea that in the future could be used to edit the user's bio information. -->
+                        <form id="textarea">
+                            <label>Bio</label><br/>
+                            <!-- The textarea should be 50 columns wide by 10 rows high.  -->
+                            <textarea cols="50" rows="10" style="text-align: left;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </textarea>
+                        </form>
+                        <!-- Confirm you can navigate from navigation.html to home.html, and profile.html and then back to navigation.html. 
+                            Also confirm you can navigate from profile.html to edit-profile.html and back again. -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>   
     </body>
 </html>
