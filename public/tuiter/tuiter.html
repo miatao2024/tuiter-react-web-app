@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tuiter</title>
+    </head>
+    <body>
+         <!-- add a Back link to navigate back to the previous screen, navigation.html. -->
+         <a href="navigation.html">Back</a>
+        
+         <!-- Below the link add an h1 Tuiter header and an h2 Home header below that. -->
+         <h1>Tuiter</h1>
+         <h2>Tuit</h2>
+ 
+         <!-- Below the headers add a 48 by 48 pixel image representing the owner of the account.  -->
+         <!-- <br/> 感觉就是用来换行的 -->
+             <img src = "my-picture.jpeg"
+                 width = "48px"
+                 height = "48px"/>
+         <br/>
+ 
+         <!-- Add a textarea element for users to post new tuits. -->
+         <!-- The textarea should have a placeholder that says "What's happening?".  -->
+         <form id="textarea" style="margin-left: 0;">  <!-- The cols and rows attributes of the <textarea> element do not accept pixel values -->
+             <textarea cols="20" rows="5">What's happening?  </textarea> 
+             <!-- !!! NO SPACE in <textarea>-->
+         
+             </form>
+         <!-- Add a dropdown with options "Everyone can reply", "People you follow", and "Only people you mention", 
+             with values "EVERYONE", "FOLLOWING", and "MENTIONED" respectively.  -->
+             <form id="text-fields">
+                 <select id="select-one-genre">
+                     <!-- Default value should be "EVERYONE" -->
+                     <option selected value="EVERYONE">Everyone can reply</option>
+                     <option value="FOLLOWING">People you follow</option>
+                     <option value="MENTIONED">Only people you mention</option>
+                 </select>
+         </form>
+         <hr>
+         <!-- <hr> tag is used to create a horizontal line. 
+             It will span the full width of its container element and visually separate the content above and below it. -->
+ 
+         <!-- Add a button to upload an image 
+             and another button labeled "Tuit" to create a new tuit.  -->
+             <input type="file"/>
+             <button type="button">Tuit</button>
+         <hr>
+    </body>
+</html>
