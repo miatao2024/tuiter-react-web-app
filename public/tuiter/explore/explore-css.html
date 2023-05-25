@@ -2,155 +2,118 @@
 <html lang ="en">
     <head>
         <meta charset = "UTF-8">
-        <title>Explore</title>
+        <title>Explore(CSS)</title>
         <link href="index.css" rel="stylesheet"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" rel="stylesheet"/>
         <!-- 标志显示的link -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/> 
-
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
     </head>
-
     <body>
-    
-        <div class="wd-right" style="margin-top: 1%;">
-            <ul style="list-style: none;">
-                <li class="wd-list-com">
-                    <a href="../navigation.html" style="color: black;"><i class="fa-solid fa-bars"></i></a>
-                </li>
-                <li  class="wd-list-com">
-                    <i class="fa-solid fa-house"></i>
-                    <a href="../home.html" style=" color: black;">Home</a>
-                </li>
-                <li class="wd-list-com wd-cur">
-                    <i class="fa-regular fa-hashtag"></i>
-                    <a href="explore-css.html" style=" color: white;">Explore(CSS)</a>
-                </li>
-                <li class="wd-list-com">
-                    <i class="fa-regular fa-hashtag"></i>
-                    <a href="index.html" style=" color: black;">Explore</a>
-                </li>
-                <li class="wd-list-com"><i class="fa-solid fa-bell"></i>
-                    <a href="notifications.html" style=" color: black;"> Notifications</a>
-                </li>
-                <li class="wd-list-com"><i class="fa-solid fa-envelope"></i>
-                    <a href="messages.html" style=" color: black;">Messages</a></li>
-                <li class="wd-list-com"><i class="fa-solid fa-bookmark"></i>
-                    <a href="../bookmarks/bookmarks-css.html" style=" color: black;">Bookmarks</a></li>
-                <li class="wd-list-com"><i class="fa-solid fa-list"></i>
-                    <a href="lists.html" style=" color: black;">Lists</a></li>
-                <li class="wd-list-com"><i class="fa-solid fa-user"></i>
-                    <a href ="../profile.html" style=" color: black;">Profile</a></li>
-                <li class="wd-list-com"><i class="fa-solid fa-ellipsis"></i>
-                    <a href="#" style=" color: black;">More</a></li>
-                <li class="wd-list-com">
-                    <a href="../tuit.html"><button type="button" style=" border-radius: 20px; width: 100px; background-color: rgb(13, 110, 253);color: white;">Tuit</button></a>
-                </li>
-            </ul>
-        </div>
-        <!-- <div class="wd-right" style="margin-top: 1%;">
-            <a href="../home.html">Home</a><br>
-            <a href="explore-css.html">Explore</a><br>
+        <div class="wd-col-left">
+            <a href="home.html">Home</a><br>
+            <a href="./explore/explore-css.html">Explore(CSS)</a><br>
             <a href="notifications.html">Notifications</a><br>
             <a href="messages.html">Messages</a><br>
-            <a href="../bookmarks/bookmarks-css.html">Bookmarks</a><br>
+            <a href="./bookmarks/bookmarks-css.html">Bookmarks</a><br>
             <a href="lists.html">Lists</a><br>
-            <a href="../profile.html">Profile</a><br>
-            <a href="../tuit.html">Tuit</a><br>
+            <a href="profile.html">Profile</a><br>
+            <a href="tuit.html">Tuit</a><br>
             <a href="reply.html">Reply</a>
-        </div> -->
+        </div>
 
-        <table>
-            <tbody>
-                <tr valign="top">
-                    <td colspan="3">
-                    </td>
-                </tr>
-                <tr valign="top">
-                    <td>
-                        <!-- left sidebar -->
+        <div class="wd-col-right">
+            
+            <!-- search row -->
+            <div class="wd-search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input id="searchbar" type="text" placeholder="Search Twitter">
+                <!-- setting icon -->
+                <i class="fa-solid fa-gear"></i>
+            </div>
 
-                    </td>
-                    <td>
-                        <!-- Search Bar -->
-                        <div class="wd-search-bar">
-                            <!-- search icon -->
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <!-- search twitter -->
-                            <input id="searchbar" type="search" placeholder="Search Tuiter">
-                        </div>
-                            <i class="fa-solid fa-gear"></i> 
-    
-                    
-                        <!-- the  selection elements -->
-                        <div class="wd-B">
-                            <a class="border" id="a1" href="foryou.html">For you</a>
-                            <a class="border" href="trending.html">Trending</a>
-                            <a class="border" href="news.html">News</a>
-                            <a class="border" href="sport.html">Sports</a>
-                            <a class="border" href="entertainment.html">Entertainment</a>
-                        </div>
-    
-                        <!-- img elements -->
-                        <div class="wd-img-zone">
-                            <img src="./photo_crown.jpg">
-                            <div class="wd-img-zone-title">The Coronation of King Charles III</div>
-                        </div>
-    
-    
-                        <!-- the news list elements -->
-                        <ul class="wd-news-list">
-                            <li class="wd-news">
-                                <div class="wd-news-info">
-                                    <div class="wd-news-trend">Trending in News </div>
-                                    <span class="wd-news-topic">Meghan</span>
-                                    <div class="wd-news-tweets">56.1K Tweets </div>
-                                </div>
-                                <div class="wd-news-more-detail">...</div>
-                            </li>
-                            <li class="wd-news">
-                                <div class="wd-news-info">
-                                    <div class="wd-news-trend">Trending </div>
-                                    <span class="wd-news-topic">Starlink</span>
-                                    <div class="wd-news-tweets">26.4K Tweets </div>
-                                </div>
-                                <div class="wd-news-more-detail">...</div>
-                            </li>
-                            <li class="wd-news">
-                                <div class="wd-news-info">
-                                    <div class="wd-news-trend">Trending in Business personalities </div>
-                                    <span class="wd-news-topic">Warren Buffett</span>
-                                    <div class="wd-news-tweets">5,502 Tweets </div>
-                                </div>
-                                <div class="wd-news-more-detail">...</div>
-                                </div>
-                            </li>
-                            <li class="wd-news">
-                                <div class="wd-news-info">
-                                    <div class="wd-news-trend">Trending in Political figures </div>
-                                    <span class="wd-news-topic">Poland</span>
-                                    <div class="wd-news-tweets">29.9K Tweets </div>
-                                </div>
-                                <div class="wd-news-more-detail">...</div>
-                            </li>
-                            <li class="wd-news">
-                                <div class="wd-news-info">
-                                    <div class="wd-news-trend">Celebrities · Trending </div>
-                                    <span class="wd-news-topic">Denzel Washington</span>
-                                    <div class="wd-news-tweets">1215 Tweets </div>
-                                </div>
-                                <div class="wd-news-more-detail">...</div>
-                    
-                            </li>
-                        </li>
-    
-        </td>
-    </tr>
-    </tbody>
-    </table>
-        
+            </br></br>
+            </br>
+            <!-- main page -->
+            <div>
+                <!-- nav bars -->
+                <ul class="wd-tabs">
+                    <li class="wd-active"><a href="#">For You</a></li>
+                    <li class="wd-tab-unselected"><a href="#">Trending</a></li>
+                    <li class="wd-tab-unselected"><a href="#">News</a></li>
+                    <li class="wd-tab-unselected"><a href="#">Sports</a></li>
+                    <li class="wd-tab-unselected"><a href="#">Entertainment</a></li>
+                </ul>
+            </div>
+            
+            </br>
 
+            <div class="wd-img">
+                <img src="../../images/Crown.jpeg">
+                <div>
+                    <div class="wd-img-title">The Coronation of King Charles III</div>
+                </div>
+            </div>
 
+            </br>
+            <div>
+            <!-- news feeds -->
+            <div class="wd-news">
+                <div class="wd-news-tags">Trending in News</div>
+                <span class="wd-news-icon">&#8943;</span>
+                <span class="wd-news-title">Meghan</span>
+                <div class="wd-tweets-number">56.1K Tweets</div>
+            </div>
+
+            <div class="wd-news">
+                <div class="wd-news-tags">Trending</div>
+                <span class="wd-news-icon">&#8943;</span>
+                <span class="wd-news-title">Starlink</span>
+                <div class="wd-tweets-number">26.4K Tweets</div>
+            </div>
+
+            <div class="wd-news">
+                <div class="wd-news-tags">Trending in Business personalities</div>
+                <span class="wd-news-icon">&#8943;</span>
+                <span class="wd-news-title">Warren Buffett</span>
+                <div class="wd-tweets-number">5,502 Tweets</div>
+            </div>
+
+            <div class="wd-news">
+                <div class="wd-news-tags">Trending in Political figures</div>
+                <span class="wd-news-icon">&#8943;</span>
+                <span class="wd-news-title">Poland</span>
+                <div class="wd-tweets-number">29.9K Tweets</div>
+            </div>
+
+            <div class="wd-news">
+                <div class="wd-news-tags">Celebrities·Trending</div>
+                <span class="wd-news-icon">&#8943;</span>
+                <span class="wd-news-title">Denzel Washington</span>
+                <div class="wd-tweets-number">1215 Tweets</div>
+            </div>
+        </div>
     </body>
 </html>
+
+<!-- align with tables-->
+<!-- 
+    <table>
+        <tbody>
+            <tr valign="top">
+                <td colspan="3">
+                </td>
+            </tr>
+            <tr valign="top">
+                <td> -->
+                    <!-- left sidebar -->
+
+                <!-- </td>
+                <td> -->
+                    <!-- main content -->
+                    <!-- search bar -->
+
+                    <!-- </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>    -->
