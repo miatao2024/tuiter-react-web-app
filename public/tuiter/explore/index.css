@@ -16,7 +16,7 @@
 } */
 
 .wd-col-left{
-  /* width: 10%; */
+  width: 10%;
   position: relative;
   float: left;
   top: 20px;
@@ -26,48 +26,89 @@
   left: 180px;
   top: 80px;
   float: left;
+  width: 80%;
 }
 
-/* search icon */
-.fa-magnifying-glass {
-  background: transparent;
+.wd-search-header {
+  display: flex;
+  margin: 10px;
+}
+
+.wd-search-container{
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  background-color: rgb(244, 244, 244);
+  border-radius: 50px; /* make rounded corners */
+  padding: 10px 20px 10px 16px; 
+  width: 90%;
+}
+
+.wd-search-icon {
+  margin-right: 5px;
+  width: 2%;
+  float: left;
   color: rgb(152, 144, 144);
-  /* position: absolute; */
-  margin-left: 15px;
+  background: transparent;
 }
 
 /* search bar */
 .wd-search-bar {
   display: flex;
-  position: relative;
-  float:left;
+  /* align-items: center; */
+  margin-left: 10px;
   width: 100%;
-  margin-left: 30px;
-  background-color: rgb(244, 244, 244);
-  border-radius: 50px; /* make rounded corners */
-  padding: 10px 0px 10px 0px; 
+  float: right;
+
+  /* Increase left padding to accommodate the gear icon */
   /* padding: defines the space between the content and the edges of the element's box */
-  top: 20px;
-  left: 20px;
+  /* top: 30px;
+  left: 20px; */
 }
 
-#searchbar {
+.wd-search-bar input{
+  flex-grow: 1;
   background-color: transparent;
-  border: 0px;
+  border: 0;
+  outline: none;
+  font-size: 120%;
+  font-family: Arial;
+}
+
+.wd-setting-icon {
+  width: auto;
+  margin: auto;
+  color: gray;
+}
+
+.wd-search-setting i {
+  margin-left: 70%;
+  /* margin-left: 80px;/* Add margin to separate the search bar and gear icon  */
+}
+/* #searchbar {
+  background-color: transparent;
+  border: 0;
   padding-left: 16px;
   outline: none;
   font-family: Arial, sans-serif;
   border-radius: 50px;
-}
+  flex: 1; 
+  /* Allow the search bar to take up remaining space 
+} */
 
+
+/* position the search bar on the left and the "fa-gear" icon on the right side of the search bar, */
 /* settings icon */
-.fa-gear{
-  position: absolute;
-  /* the white spaces separating content  */
+/* .fa-gear{
+  /* the white spaces separating content
   font-size: 20px;
-  top: 20px;
-  right: 10px;
+
   color: gray;
+}
+*/
+
+.wd-tab-container{
+    display: flex;
+    border-bottom: 1px solid rgb(236, 236, 236);
 }
 
 .wd-tabs {
@@ -83,8 +124,8 @@
   margin-left: 30px;
 }
 
-/* 要用li */
-.wd-tabs li a {
+/* 不要用li */
+.wd-tabs a {
   text-decoration: none;
   padding: 16px;
   color: grey;
@@ -102,7 +143,6 @@
   color: black;
 }
 
-
 /* inactive page */
 .wd-tab-unselected{
   display: inline;
@@ -111,27 +151,50 @@
   float:left;
 }
 
-.wd-img{
+.wd-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
   position: relative;
-  width: 200%;
-  margin-left: 30px;;
-  padding:0;
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+
+/* 注意这里的大小要分开写 */
+.wd-img-container img {
+  width: 100%;
   object-fit: cover;
 }
 
-.wd-img-title{
+/* use CSS so that it renders on top of the image at the bottom left corner */
+.wd-img-title {
   position: absolute;
-  top: 100px;
+  bottom: 20px;
   left: 20px;
   color: white;
   font-weight: bold;
+  font-size: 24px;
 }
 
-
 /* News feed */
+.wd-tweets-container ul{
+  list-style-type: none;
+  padding-left: 20px;
+  margin: 0px;
+  font-size: 140%;
+}
+
+.wd-tweets-info{
+  width: 95%;
+}
+
+/* 特别重要 */
 .wd-news{
-  margin-left: 100px;
-  width: 120%
+  display: flex;
+  margin-bottom: 30px;
 }
 
 .wd-news-tags{
@@ -161,4 +224,8 @@
   float: right;
   margin-right: 10px;
   font-weight: bold;
+}
+
+.wd-more-tool{
+
 }
