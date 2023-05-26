@@ -2,7 +2,11 @@
 /* font */
 * {
   color: black;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 20px;
 }
 
 /* margin for the whole page */
@@ -15,14 +19,15 @@
   clear:both;
 } */
 
-.wd-col-left{
+.wd-col-left {
   width: 10%;
   position: relative;
   float: left;
   top: 20px;
+  left:10px;
 }
 
-.wd-col-right{
+.wd-col-right {
   left: 180px;
   top: 80px;
   float: left;
@@ -35,12 +40,14 @@
   margin: 10px;
 }
 
-.wd-search-container{
+.wd-search-container {
   display: flex;
-  align-items: center; /* Align items vertically in the center */
+  align-items: center;
+  /* Align items vertically in the center */
   background-color: rgb(244, 244, 244);
-  border-radius: 50px; /* make rounded corners */
-  padding: 10px 20px 10px 16px; 
+  border-radius: 50px;
+  /* make rounded corners */
+  padding: 10px 20px 10px 16px;
   width: 90%;
 }
 
@@ -66,7 +73,7 @@
   left: 20px; */
 }
 
-.wd-search-bar input{
+.wd-search-bar input {
   flex-grow: 1;
   background-color: transparent;
   border: 0;
@@ -77,14 +84,17 @@
 
 .wd-setting-icon {
   width: auto;
-  margin: auto;
+  /* margin: auto; */
+  padding-top: 10px;
+  padding-right: 5px;
   color: gray;
 }
 
 .wd-setting-icon i {
-  margin-right: 60px;
-  /* margin-left: 80px;/* Add margin to separate the search bar and gear icon  */
+  margin-left: 20px;
+
 }
+  /* margin-left: 80px;/* Add margin to separate the search bar and gear icon  */
 
 
 /* #searchbar {
@@ -109,9 +119,9 @@
 }
 */
 
-.wd-tab-container{
-    display: flex;
-    border-bottom: 1px solid rgb(236, 236, 236);
+.wd-tab-container {
+  display: flex;
+  border-bottom: 1px solid rgb(236, 236, 236);
 }
 
 .wd-tabs {
@@ -120,7 +130,7 @@
   display: flex;
   margin: 0;
   /* 均匀分布 */
-  justify-content: space-between; 
+  justify-content: space-between;
   padding: 0px;
   border-bottom: solid 0.5px;
   width: 120%;
@@ -135,6 +145,7 @@
   padding: 16px;
   color: grey;
 }
+
 /* active page */
 .wd-active {
   color: rgb(46, 156, 225);
@@ -149,11 +160,11 @@
 }
 
 /* inactive page */
-.wd-tab-unselected{
+.wd-tab-unselected {
   display: inline;
   /* block 竖着*/
   /* By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line */
-  float:left;
+  float: left;
 }
 
 .wd-img-container {
@@ -185,45 +196,45 @@
 }
 
 /* News feed */
-.wd-tweets-container ul{
+.wd-tweets-container ul {
   list-style-type: none;
   padding-left: 20px;
   margin: 0px;
   font-size: 140%;
 }
 
-.wd-tweets-info{
+.wd-tweets-info {
   width: 95%;
 }
 
 /* 特别重要 */
-.wd-news{
+.wd-news {
   display: flex;
   margin-bottom: 30px;
 }
 
-.wd-news-tags{
-  color:gray;
+.wd-news-tags {
+  color: gray;
   font-size: 16px;
   margin-bottom: 1px;
 }
 
-.wd-news-title{
-  color:black;
+.wd-news-title {
+  color: black;
   margin-top: 1px;
   margin-bottom: 1px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
-.wd-tweets-number{
+.wd-tweets-number {
   color: gray;
   font-size: 16px;
   margin-top: 1px;
   margin-bottom: 1px;
 }
 
-.wd-news-icon{
-  color:gray;
+.wd-news-icon {
+  color: gray;
   font-size: 30px;
   text-decoration: none;
   float: right;
