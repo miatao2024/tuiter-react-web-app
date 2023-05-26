@@ -29,6 +29,7 @@
   width: 80%;
 }
 
+
 .wd-search-header {
   display: flex;
   margin: 10px;
@@ -80,10 +81,12 @@
   color: gray;
 }
 
-.wd-search-setting i {
-  margin-left: 70%;
+.wd-setting-icon i {
+  margin-right: 60px;
   /* margin-left: 80px;/* Add margin to separate the search bar and gear icon  */
 }
+
+
 /* #searchbar {
   background-color: transparent;
   border: 0;
@@ -228,6 +231,6 @@
   font-weight: bold;
 }
 
-.wd-more-tool{
+/* .wd-more-tool{
 
-}
+} */
