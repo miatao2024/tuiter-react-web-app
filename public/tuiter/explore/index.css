@@ -168,31 +168,31 @@ body {
 }
 
 .wd-img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-flex;
+  /* justify-content: center; */
+  /* align-items: center; */
   /* overflow: hidden; */
   position: relative;
   width: 100%;
-  padding: 5px;
-  border-bottom: 1px solid rgb(236, 236, 236);
+  /* padding: 5px; */
+  /* border-bottom: 1px solid rgb(236, 236, 236); */
 }
 
 
 /* 注意这里的大小要分开写 */
 .wd-img-container img {
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 /* use CSS so that it renders on top of the image at the bottom left corner */
 .wd-img-title {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 5px;
+  left: 15px;
   color: white;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 36px;
 }
 
 /* News feed */
