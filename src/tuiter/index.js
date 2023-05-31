@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import Nav from "../nav";
 import NavigationSidebar from './navigation-sidebar/index';
 import HomeScreen from './home/home-screen';
-import ExploreScreen from './explore-screen/index';
+import ExploreScreen from "./explore-screen/index";
 import BookmarksScreen from './bookmarks/bookmarks-screen';
 import ProfileScreen from './profile/profile-screen';
 // import WhoToFollowListItem from "./who-to-follow-list/who-to-follow-list-item";
@@ -17,14 +17,14 @@ function Tuiter() {
          <Nav/>
 
          <div className="row">
-            <div className="col-2 col-xl-2 col-lg-1 col-md-2">
+            <div className="col-2">
                <NavigationSidebar/>
             </div>
 
-            <div className="col-7 col-xl-6 col-lg-7 col-md-10">   
+            <div className="col-7">   
                <Routes>
                   <Route path="/home" element={<HomeScreen/>} />
-                  <Route path="/explore-screen" element={<ExploreScreen/>} />
+                  <Route path="/explore" element={<ExploreScreen/>} />
                   <Route path="/notifications" element={<h1>Notifications</h1>} />
                   <Route path="/messages" element={<h1>Messages</h1>} />
                   <Route path="/bookmarks" element={<BookmarksScreen/>} />

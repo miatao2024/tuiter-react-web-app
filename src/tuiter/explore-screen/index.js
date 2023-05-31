@@ -30,6 +30,12 @@ function ExploreScreen() {
                 <li className="nav-item">
                     <a className="nav-link">News</a>
                 </li>
+                <li className="nav-item">
+                    <a className="nav-link">Sports</a>
+                </li>
+                <li className="nav-item d-none d-md-block d-lg-block d-xxl-block">
+                    <a className="nav-link">Entertainment</a>
+                </li>
             </ul>
                 <div className="position-relative mb-2">
                     {/* #location */}
