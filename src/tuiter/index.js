@@ -25,6 +25,7 @@ function Tuiter() {
                <Routes>
                   <Route path="/home" element={<HomeScreen/>} />
                   <Route path="/explore" element={<ExploreScreen/>} />
+                  {/* explore-screen name of folder vs path name*/}
                   <Route path="/notifications" element={<h1>Notifications</h1>} />
                   <Route path="/messages" element={<h1>Messages</h1>} />
                   <Route path="/bookmarks" element={<BookmarksScreen/>} />

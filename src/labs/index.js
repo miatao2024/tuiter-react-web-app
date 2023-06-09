@@ -1,7 +1,9 @@
 import React from 'react';
 import Assignment3 from './a3';
+import Assignment4 from "./a4";
 import {Link} from "react-router-dom";
 import Nav from "../nav";
+import {Routes, Route} from "react-router";
 
 
 function Labs() {
@@ -12,7 +14,11 @@ function Labs() {
          <Link to="/hello">Hello</Link> |
          <Link to="/tuiter">Tuiter</Link> */}
          <Nav/>
-         <Assignment3/>
+         <Routes>
+            <Route path="a3" element={<Assignment3/>}/>
+            <Route path="a4" element={<Assignment4/>}/>
+         </Routes>
+         {/* <Assignment3/> */}
        </div>
     );
  }
