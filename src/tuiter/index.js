@@ -13,8 +13,11 @@ import whoReducer from "./reducers/who-reducer";            // import the reduce
 import tuitsReducer from "./reducers/tuits-reducer";         // import the new tuits reducer
 import { configureStore } from '@reduxjs/toolkit';          // import configureStore
 import {Provider} from "react-redux";                       // import the Provider component
-const store = configureStore(                               // configure the store
-   {reducer: {who: whoReducer, tuits: tuitsReducer}});      // add it to the store
+
+const store = configureStore({                               // configure the store
+   reducer:{
+      who: whoReducer, 
+      tuits: tuitsReducer}});      // add it to the store   // rename reducer property since now it's not just an array
 
 function Tuiter() {
     return(

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {useDispatch} from "react-redux";
-import {createTuit} from "./reducers/tuits-reducer";
+// import {createTuit} from "./reducers/tuits-reducer";
+import {createTuitThunk} from "./services/tuits-thunks";    // wont be using the reducer function anymore we'll be using the createTuitThunk instead
 import { AiOutlinePicture } from "react-icons/ai"
 import { HiOutlineGif } from "react-icons/hi2"
 import { HiOutlineLocationMarker } from "react-icons/hi"
@@ -16,7 +17,8 @@ const WhatsHappening = () => {
         const newTuit = {
             tuit: whatsHappening
         }
-        dispatch(createTuit(newTuit));
+        // dispatch(createTuit(newTuit));
+        dispatch(createTuitThunk(newTuit));             // use thunk instead of reducer function
         setWhatsHappening("");
 
         // console.log(whatsHappening);
@@ -57,6 +59,7 @@ const WhatsHappening = () => {
                     </div>
                 </div>
             </div>
+
             <div className="col-12"><hr/></div>
         </div>
     );
