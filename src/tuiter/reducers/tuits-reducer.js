@@ -12,7 +12,7 @@ const initialState = {      // initial state has
 const currentUser = {       // create an object that represents the currently
     "userName": "NASA",     // logged in user which contains profile information
     "handle": "@nasa",      // such as username, their avatar logo, and handle.
-    "image": "NASA.png",    // Later this will come from users login in
+    "image": "../../images/NASA.png",    // Later this will come from users login in
 };
 
 const templateTuit = {          // create a template tuit object with some default                                // values and copy over the fields userName, handle and
@@ -39,11 +39,13 @@ const tuitsSlice = createSlice({
         [findTuitsThunk.pending]:               // if request is not yet fulfilled …
             (state) => {
                 state.loading = true            // set loading true so UI can display spinner
-                state.tuits = [] },             // empty tuits since we are still fetching them
+                state.tuits = [] 
+            },                                  // empty tuits since we are still fetching them
         [findTuitsThunk.fulfilled]:             // when we get response, request is fulfilled
             (state, { payload }) => {           // we extract/destruct payload from action object
                 state.loading = false           // turn off loading flag since we have the data
-                state.tuits = payload },        // payload has tuits from server and update redux state
+                state.tuits = payload 
+            },                                  // payload has tuits from server and update redux state
         [findTuitsThunk.rejected]:              // if request times out, or responds with error
             (state, action) => {
                 state.loading = false           // reset loading flag
@@ -63,32 +65,30 @@ const tuitsSlice = createSlice({
                 state.tuits = state.tuits .filter(t => t._id !== payload)
         },                                      // rejected thunks
     },
-    reducers: { }                           // we're not going to use the old reducers anymore
-});
+    reducers: {
+        updateLike(state, action) {
+            const index = state.tuits.findIndex(tuit => tuit._id === action.payload);
+            state.tuits[index].liked = !state.tuits[index].liked
+            if (state.tuits[index].liked) {
+                state.tuits[index].likes++;
+            } else state.tuits[index].likes--;
+        },
+        createtuit(state, action){
+            state.tuits.unshift({
+                ...action.payload,
+                ...templateTuit,
+                _id:(new Date()).getTime(),
+            })
+        },
+        deleteTuit(state, action) {
+            const index = state.tuits.findIndex(        // reducer function to delete tuit looks up index of tuit from state comparing each tuit's
+                tuit => tuit._id === action.payload);   // ID with action's payload, then
+            state.tuits.splice(index, 1);                                            // splices tuit from state
+        }
+    },
+});                           // we're not going to use the old reducers anymore
         
-//  initialState: { tuits: tuits },
-//     reducers: {
-//         updateLike(state, action) {
-//             const index = state.tuits.findIndex(tuit => tuit._id === action.payload);
-//             state.tuits[index].liked = !state.tuits[index].liked
-//             if (state.tuits[index].liked) {
-//                 state.tuits[index].likes++;
-//             } else state.tuits[index].likes--;
-//         },
-//         createtuit(state, action){
-//             state.tuits.unshift({
-//                 ...action.payload,
-//                 ...templateTuit,
-//                 _id:(new Date()).getTime(),
-//             })
-//         },
-//         deleteTuit(state, action) {
-//             const index = state.tuits.findIndex(        // reducer function to delete tuit looks up index of tuit from state comparing each tuit's
-//                 tuit => tuit._id === action.payload);   // ID with action's payload, then
-//             state.tuits.splice(index, 1);                                            // splices tuit from state
-//         }
-//     },
-// });
+
 
 export const {updateLike, createTuit, deleteTuit} = tuitsSlice.actions;  // export reducer function          // export reducer function
 export default tuitsSlice.reducer;

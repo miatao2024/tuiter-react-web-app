@@ -12,7 +12,7 @@ function LoginScreen() {
     const handleLogin = async () => {                       // handles login button click
         try {
             await dispatch(loginThunk({ username, password }));     // send credentials to login controller
-            navigate("/profile");                                   // if successful, navigate to profile
+            navigate("../profile");                                   // if successful, navigate to profile
         } catch (e) {
             alert(e);                                               // if not show error
         }
@@ -37,6 +37,6 @@ function LoginScreen() {
                 Login
             </button>
         </div>
-       );      
+    );      
 }
 export default LoginScreen;
