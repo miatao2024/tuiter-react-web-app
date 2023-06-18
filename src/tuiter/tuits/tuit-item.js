@@ -13,15 +13,20 @@ const TuitItem = ({tuit})=> {
     return (
         <li className = "list-group-item">
             <div className = "col-auto">
-                <img width = {50} className = "float-end rounded-circle" src = {tuit.image} /> 
+                <img 
+                    width = {50} 
+                    className = "float-start rounded-circle" 
+                    src = {tuit.image} /> 
             </div>
             <div className="col-10">
                 <div>
-                    <Icon.X className = "bi bi-x-lg float-end"      // X icon calls delete tuit // handler when clicked
-                            onClick = {() => deleteTuitHandler(tuit._id)}/> 
-                        <div className = "fw-bold">{tuit.userName}</div>
-                        <i className = "bi bi-check-circle-fill text-primary"></i>
-                        <span className="fw-normal text-secondary"> {tuit.handle} • {tuit.time} </span>
+                    <Icon.X 
+                        className = "bi bi-x-lg float-end"      // X icon calls delete tuit // handler when clicked
+                        onClick = {() => deleteTuitHandler(tuit._id)}
+                    /> 
+                    <div className = "fw-bold">{tuit.userName}</div>
+                    <i className = "bi bi-check-circle-fill text-primary"></i>
+                    <span className="fw-normal text-secondary"> {tuit.handle} • {tuit.time} </span>
                 </div>
                 <div>{tuit.tuit}</div>
                 <TuitStats tuit={tuit}/>
