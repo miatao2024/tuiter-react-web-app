@@ -15,17 +15,17 @@ const TuitItem = ({tuit})=> {
             <div className = "col-auto">
                 <img 
                     width = {50} 
-                    className = "float-start rounded-circle" 
+                    className = "float-end rounded-circle" 
                     src = {tuit.image} /> 
             </div>
             <div className="col-10">
                 <div>
                     <Icon.X 
-                        className = "bi bi-x-lg float-end"      // X icon calls delete tuit // handler when clicked
+                        className = "float-end"      // X icon calls delete tuit // handler when clicked
                         onClick = {() => deleteTuitHandler(tuit._id)}
                     /> 
                     <div className = "fw-bold">{tuit.userName}</div>
-                    <i className = "bi bi-check-circle-fill text-primary"></i>
+                    <i className = "bi bi-check-circle-fill text-primary ms-2 me-1"></i>
                     <span className="fw-normal text-secondary"> {tuit.handle} • {tuit.time} </span>
                 </div>
                 <div>{tuit.tuit}</div>
