@@ -1,6 +1,14 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import * as authService from "./auth-service";
 
+
+export const loginThunk = createAsyncThunk(
+    "user/login", async (credentials) => {
+        const user = await authService.login(credentials);
+        return user;
+    }
+);
+
 export const profileThunk = createAsyncThunk(
     "auth/profile", async () => {
         return await authService.profile();
@@ -10,13 +18,6 @@ export const profileThunk = createAsyncThunk(
     //     const response = authService.profile();
     //     return response.data;
     // }
-
-export const loginThunk = createAsyncThunk(
-    "user/login", async (credentials) => {
-        const user = await authService.login(credentials);
-        return user;
-    }
-);
 
 
 export const logoutThunk = createAsyncThunk(
@@ -36,7 +37,7 @@ export const updateUserThunk = createAsyncThunk(
 //fix registerThunk
 export const registerThunk = createAsyncThunk(
     "user/register", async (credentials) => {
-     const user = await authService.register( credentials );
-    return user;
+     const registeredUser = await authService.register( credentials );
+    return registeredUser;
    }
 );

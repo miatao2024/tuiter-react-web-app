@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 //import * as service from "../services/auth-service";
 import { registerThunk } from "../services/auth-thunks";
 import { useDispatch } from "react-redux";
@@ -11,13 +11,16 @@ function RegisterScreen()  {
     const [lastName, setLastName] = useState("");
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
     const handleRegister = async () => {
-    try {
-        await dispatch(registerThunk({ lastName, firstName, username, password  }));
-        navigate("../profile");
-    } catch (e) {
-        alert(e);
-    }}
+        try {
+            await dispatch(registerThunk({ username, password, lastName, firstName }));
+            navigate("../profile");
+        } catch (e) {
+            alert(e);
+        }
+    };
+
     return (
         <div>
             <h1>
@@ -48,7 +51,7 @@ function RegisterScreen()  {
             }/>
             </div>
             <div>
-                <button className="btn btn-primary mt-2" onClick={handleRegister}>Signup</button>
+                <button className="btn btn-primary mt-2" onClick={handleRegister}>Register</button>
 
             </div>
             

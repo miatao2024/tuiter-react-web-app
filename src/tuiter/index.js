@@ -7,7 +7,7 @@ import NavigationSidebar from './navigation-sidebar/index';
 import HomeScreen from './home/home-screen';
 import ExploreScreen from "./explore-screen/index";
 import BookmarksScreen from './bookmarks/bookmarks-screen';
-import ProfileScreen from './profile/profile-screen';
+// import ProfileScreen from './profile/profile-screen';
 // import WhoToFollowListItem from "./who-to-follow-list/who-to-follow-list-item";
 import WhoToFollowList from "./who-to-follow-list/index";
 import whoReducer from "./reducers/who-reducer";            // import the reducer
@@ -16,7 +16,7 @@ import tuitsNewSlice from "./reducers/tuits-reducer";
 import { configureStore } from '@reduxjs/toolkit';          // import configureStore
 import {Provider} from "react-redux";                       // import the Provider component
 
-// import ProfileScreen from "./user/profile";
+import ProfileScreen from "./profile/profile-screen";
 import LoginScreen from "./user/login-screen";
 import RegisterScreen from "./user/register-screen";
 import authReducer from "./reducers/auth-reducer";
@@ -25,7 +25,7 @@ const store = configureStore({                               // configure the st
    reducer:{
       who: whoReducer, 
       tuits: tuitsReducer,
-      tuit: tuitsNewSlice,
+      // tuit: tuitsNewSlice,
       user:  authReducer
    }
 });      // add it to the store   // rename reducer property since now it's not just an array
@@ -37,7 +37,7 @@ function Tuiter() {
          <div>
             <Nav/>
             <div className="row">
-               <div class="col-2 col-lg-1 col-xl-2">
+               <div class="col-2">
                   <NavigationSidebar/>
                </div>
 
